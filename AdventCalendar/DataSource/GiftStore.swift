@@ -35,5 +35,5 @@ let gifts = [("Water Bottle", 1),
              ("Toblerone", 23),
              ("Toblerone", 24)
     ]
-            .map{Gift(day: $0.1, name: $0.0)}.shuffled()
+            .map{Gift(day: $0.1, name: $0.0)}
 }

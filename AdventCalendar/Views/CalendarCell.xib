@@ -24,13 +24,13 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="750" text="1" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RwV-Ub-tJr">
-                        <rect key="frame" x="23" y="123.5" width="184" height="41"/>
-                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                        <rect key="frame" x="23" y="127.5" width="184" height="33.5"/>
+                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
-                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="YKJ-cc-tj2" secondAttribute="trailing" id="4Ck-yG-hP8"/>
                     <constraint firstAttribute="bottom" secondItem="5J2-gN-Uer" secondAttribute="bottom" id="4HC-4E-hyb"/>

@@ -26,7 +26,7 @@ class CalendarViewController: UIViewController {
     private func configureCollectionView() {
         collectionView.register(UINib(nibName: CalendarCell.reuseIdentifier, bundle: nil), forCellWithReuseIdentifier: CalendarCell.reuseIdentifier)
         collectionView.delegate = self
-        viewModels = getGifts().map{CalendarViewModel($0)}
+        viewModels = getGifts().map{CalendarViewModel($0)}.shuffled()
         collectionView.collectionViewLayout = configureCollectionViewLayout()
         configureDataSource()
         configureSnapShot()
@@ -48,16 +48,17 @@ class CalendarViewController: UIViewController {
       }
     
       func configureDataSource() {
-           dataSource = UICollectionViewDiffableDataSource<CalendarSection, CalendarViewModel>(collectionView: collectionView) { (collectionView: UICollectionView, indexPath: IndexPath, calendarViewModel: CalendarViewModel) -> UICollectionViewCell? in
+           dataSource = UICollectionViewDiffableDataSource<CalendarSection, CalendarViewModel>(collectionView: collectionView) { [weak self] (collectionView: UICollectionView, indexPath: IndexPath, calendarViewModel: CalendarViewModel)  ->  UICollectionViewCell? in
 
              guard  let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CalendarCell.reuseIdentifier, for: indexPath) as? CalendarCell else { return nil }
-
+            if let viewModel = self?.viewModels[indexPath.row] {
+                cell.configureCell(viewModel)
+            }
              return cell
            }
         }
     
     func configureSnapShot() {
-        
         var initialSnapShot = NSDiffableDataSourceSnapshot<CalendarSection, CalendarViewModel>()
         initialSnapShot.appendSections([.main])
         initialSnapShot.appendItems(viewModels)
@@ -69,7 +70,7 @@ class CalendarViewController: UIViewController {
 
 extension CalendarViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+        print("tapped")
     }
 }
 
