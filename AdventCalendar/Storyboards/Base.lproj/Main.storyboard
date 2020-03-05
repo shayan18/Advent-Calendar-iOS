@@ -84,7 +84,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="352" height="269"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BzV-0U-jml">
-                                        <rect key="frame" x="35" y="134.5" width="282" height="0.0"/>
+                                        <rect key="frame" x="17.5" y="161.5" width="317" height="0.0"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="30"/>
                                         <color key="textColor" name="primaryColor"/>
                                         <nil key="highlightedColor"/>
@@ -94,11 +94,11 @@
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="TME-dX-Uxl" secondAttribute="bottom" id="6Y3-fb-XX4"/>
                                     <constraint firstAttribute="trailing" secondItem="TME-dX-Uxl" secondAttribute="trailing" id="OFP-YS-0ft"/>
-                                    <constraint firstItem="BzV-0U-jml" firstAttribute="centerY" secondItem="BtX-Ap-pW2" secondAttribute="centerY" id="evI-VN-Cbs"/>
+                                    <constraint firstItem="BzV-0U-jml" firstAttribute="centerY" secondItem="BtX-Ap-pW2" secondAttribute="centerY" multiplier="1.2" id="evI-VN-Cbs"/>
                                     <constraint firstItem="TME-dX-Uxl" firstAttribute="leading" secondItem="BtX-Ap-pW2" secondAttribute="leading" id="fAW-Pd-I27"/>
                                     <constraint firstItem="TME-dX-Uxl" firstAttribute="top" secondItem="BtX-Ap-pW2" secondAttribute="top" id="gZo-zB-LA6"/>
                                     <constraint firstItem="BzV-0U-jml" firstAttribute="centerX" secondItem="BtX-Ap-pW2" secondAttribute="centerX" id="nsh-4C-M2F"/>
-                                    <constraint firstItem="BzV-0U-jml" firstAttribute="width" secondItem="TME-dX-Uxl" secondAttribute="width" multiplier="0.8" id="ztm-sN-sOT"/>
+                                    <constraint firstItem="BzV-0U-jml" firstAttribute="width" secondItem="TME-dX-Uxl" secondAttribute="width" multiplier="0.9" id="ztm-sN-sOT"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">

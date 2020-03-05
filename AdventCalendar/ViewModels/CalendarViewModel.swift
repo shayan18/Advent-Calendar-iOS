@@ -39,7 +39,7 @@ extension CalendarViewModel {
     }
     
     var giftDescription: String {
-        return "You won: \(model.name)"
+        return "Yahooo! You Got \(model.name)"
     }
 }
 
