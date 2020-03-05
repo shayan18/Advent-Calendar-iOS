@@ -53,8 +53,7 @@
             </collectionViewCellContentView>
             <size key="customSize" width="230" height="192"/>
             <connections>
-                <outlet property="thumbnailImageView" destination="YKJ-cc-tj2" id="5GL-WL-ivZ"/>
-                <outlet property="titleLabel" destination="RwV-Ub-tJr" id="3By-PK-gyW"/>
+                <outlet property="dayLabel" destination="RwV-Ub-tJr" id="ox9-NI-2ef"/>
             </connections>
             <point key="canvasLocation" x="126" y="106"/>
         </collectionViewCell>
