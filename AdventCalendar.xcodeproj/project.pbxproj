@@ -26,6 +26,7 @@
 		E44770BC24114E6D00BF9131 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44770BB24114E6D00BF9131 /* Storyboarded.swift */; };
 		E44770BF24114E9E00BF9131 /* ClassNameProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44770BE24114E9E00BF9131 /* ClassNameProtocol.swift */; };
 		E44770C124114F6900BF9131 /* Extension+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44770C024114F6900BF9131 /* Extension+UIView.swift */; };
+		E44770C324115B4C00BF9131 /* Extension+UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44770C224115B4C00BF9131 /* Extension+UICollectionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		E44770BB24114E6D00BF9131 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
 		E44770BE24114E9E00BF9131 /* ClassNameProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassNameProtocol.swift; sourceTree = "<group>"; };
 		E44770C024114F6900BF9131 /* Extension+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIView.swift"; sourceTree = "<group>"; };
+		E44770C224115B4C00BF9131 /* Extension+UICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UICollectionView.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 				E42812042411347A00F61746 /* ViewModels */,
 				E42811FF241133F400F61746 /* Models */,
 				E42812032411341D00F61746 /* DataSource */,
+				E44770C424115CE300BF9131 /* Enumeration */,
 				E4281207241135EB00F61746 /* Extensions */,
 				E41DE163241111E700F4032C /* Assets.xcassets */,
 				E41DE168241111E700F4032C /* Info.plist */,
@@ -120,7 +123,6 @@
 			children = (
 				E41DE160241111E600F4032C /* Main.storyboard */,
 				E41DE165241111E700F4032C /* LaunchScreen.storyboard */,
-				E428120A2411378100F61746 /* CalendarSection.swift */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -162,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				E44770C024114F6900BF9131 /* Extension+UIView.swift */,
+				E44770C224115B4C00BF9131 /* Extension+UICollectionView.swift */,
 				E42812082411360400F61746 /* Extension+Date.swift */,
 				E44770B924114E3F00BF9131 /* Extension+UIViewController.swift */,
 				E44770BD24114E7100BF9131 /* Protocols */,
@@ -176,6 +179,14 @@
 				E44770BE24114E9E00BF9131 /* ClassNameProtocol.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		E44770C424115CE300BF9131 /* Enumeration */ = {
+			isa = PBXGroup;
+			children = (
+				E428120A2411378100F61746 /* CalendarSection.swift */,
+			);
+			path = Enumeration;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,6 +273,7 @@
 				E431659B241115CF00CAC2C8 /* CalendarCell.swift in Sources */,
 				E42812092411360400F61746 /* Extension+Date.swift in Sources */,
 				E44770BA24114E3F00BF9131 /* Extension+UIViewController.swift in Sources */,
+				E44770C324115B4C00BF9131 /* Extension+UICollectionView.swift in Sources */,
 				E44770B624114D1C00BF9131 /* CalendarAlertViewController.swift in Sources */,
 				E42812012411340D00F61746 /* GiftStore.swift in Sources */,
 				E42812062411353F00F61746 /* CalendarViewModel.swift in Sources */,

@@ -24,7 +24,7 @@ class CalendarViewController: UIViewController {
     }
 
     private func configureCollectionView() {
-        collectionView.register(UINib(nibName: CalendarCell.reuseIdentifier, bundle: nil), forCellWithReuseIdentifier: CalendarCell.reuseIdentifier)
+        collectionView.register(cellType: CalendarCell.self)
         collectionView.delegate = self
         viewModels = getGifts().map{CalendarViewModel($0)}.shuffled()
         collectionView.collectionViewLayout = configureCollectionViewLayout()
@@ -49,8 +49,7 @@ class CalendarViewController: UIViewController {
     
       func configureDataSource() {
            dataSource = UICollectionViewDiffableDataSource<CalendarSection, CalendarViewModel>(collectionView: collectionView) { [weak self] (collectionView: UICollectionView, indexPath: IndexPath, calendarViewModel: CalendarViewModel)  ->  UICollectionViewCell? in
-
-             guard  let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CalendarCell.reuseIdentifier, for: indexPath) as? CalendarCell else { return nil }
+            let cell = collectionView.dequeueReusableCell(with: CalendarCell.self, for: indexPath)
             if let viewModel = self?.viewModels[indexPath.row] {
                 cell.configureCell(viewModel)
             }
