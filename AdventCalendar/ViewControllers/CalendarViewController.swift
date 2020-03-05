@@ -64,7 +64,6 @@ class CalendarViewController: UIViewController {
         dataSource.apply(initialSnapShot, animatingDifferences: true)
     }
       
-
 }
 
 extension CalendarViewController: UICollectionViewDelegate {
