@@ -20,6 +20,12 @@
 		E428120B2411378100F61746 /* CalendarSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E428120A2411378100F61746 /* CalendarSection.swift */; };
 		E431659B241115CF00CAC2C8 /* CalendarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E431659A241115CF00CAC2C8 /* CalendarCell.swift */; };
 		E431659D241115DC00CAC2C8 /* CalendarCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E431659C241115DB00CAC2C8 /* CalendarCell.xib */; };
+		E44770B624114D1C00BF9131 /* CalendarAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44770B524114D1C00BF9131 /* CalendarAlertViewController.swift */; };
+		E44770B824114DDF00BF9131 /* SnowParticleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44770B724114DDF00BF9131 /* SnowParticleView.swift */; };
+		E44770BA24114E3F00BF9131 /* Extension+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44770B924114E3F00BF9131 /* Extension+UIViewController.swift */; };
+		E44770BC24114E6D00BF9131 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44770BB24114E6D00BF9131 /* Storyboarded.swift */; };
+		E44770BF24114E9E00BF9131 /* ClassNameProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44770BE24114E9E00BF9131 /* ClassNameProtocol.swift */; };
+		E44770C124114F6900BF9131 /* Extension+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44770C024114F6900BF9131 /* Extension+UIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +44,12 @@
 		E428120A2411378100F61746 /* CalendarSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarSection.swift; sourceTree = "<group>"; };
 		E431659A241115CF00CAC2C8 /* CalendarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCell.swift; sourceTree = "<group>"; };
 		E431659C241115DB00CAC2C8 /* CalendarCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalendarCell.xib; sourceTree = "<group>"; };
+		E44770B524114D1C00BF9131 /* CalendarAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarAlertViewController.swift; sourceTree = "<group>"; };
+		E44770B724114DDF00BF9131 /* SnowParticleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnowParticleView.swift; sourceTree = "<group>"; };
+		E44770B924114E3F00BF9131 /* Extension+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIViewController.swift"; sourceTree = "<group>"; };
+		E44770BB24114E6D00BF9131 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
+		E44770BE24114E9E00BF9131 /* ClassNameProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassNameProtocol.swift; sourceTree = "<group>"; };
+		E44770C024114F6900BF9131 /* Extension+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIView.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				E41DE15E241111E600F4032C /* CalendarViewController.swift */,
+				E44770B524114D1C00BF9131 /* CalendarAlertViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -97,6 +110,7 @@
 			children = (
 				E431659A241115CF00CAC2C8 /* CalendarCell.swift */,
 				E431659C241115DB00CAC2C8 /* CalendarCell.xib */,
+				E44770B724114DDF00BF9131 /* SnowParticleView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -147,9 +161,21 @@
 		E4281207241135EB00F61746 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				E44770C024114F6900BF9131 /* Extension+UIView.swift */,
 				E42812082411360400F61746 /* Extension+Date.swift */,
+				E44770B924114E3F00BF9131 /* Extension+UIViewController.swift */,
+				E44770BD24114E7100BF9131 /* Protocols */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E44770BD24114E7100BF9131 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				E44770BB24114E6D00BF9131 /* Storyboarded.swift */,
+				E44770BE24114E9E00BF9131 /* ClassNameProtocol.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -226,11 +252,17 @@
 			files = (
 				E41DE15F241111E600F4032C /* CalendarViewController.swift in Sources */,
 				E42811FE241133F100F61746 /* Gift.swift in Sources */,
+				E44770C124114F6900BF9131 /* Extension+UIView.swift in Sources */,
 				E41DE15B241111E600F4032C /* AppDelegate.swift in Sources */,
+				E44770BF24114E9E00BF9131 /* ClassNameProtocol.swift in Sources */,
+				E44770B824114DDF00BF9131 /* SnowParticleView.swift in Sources */,
 				E428120B2411378100F61746 /* CalendarSection.swift in Sources */,
+				E44770BC24114E6D00BF9131 /* Storyboarded.swift in Sources */,
 				E41DE15D241111E600F4032C /* SceneDelegate.swift in Sources */,
 				E431659B241115CF00CAC2C8 /* CalendarCell.swift in Sources */,
 				E42812092411360400F61746 /* Extension+Date.swift in Sources */,
+				E44770BA24114E3F00BF9131 /* Extension+UIViewController.swift in Sources */,
+				E44770B624114D1C00BF9131 /* CalendarAlertViewController.swift in Sources */,
 				E42812012411340D00F61746 /* GiftStore.swift in Sources */,
 				E42812062411353F00F61746 /* CalendarViewModel.swift in Sources */,
 			);

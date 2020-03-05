@@ -69,8 +69,70 @@
             </objects>
             <point key="canvasLocation" x="5256.521739130435" y="126.5625"/>
         </scene>
+        <!--Calendar Alert View Controller-->
+        <scene sceneID="rI2-AK-fFQ">
+            <objects>
+                <viewController storyboardIdentifier="CalendarAlertViewController" modalTransitionStyle="crossDissolve" modalPresentationStyle="overFullScreen" id="9TV-5l-SeH" customClass="CalendarAlertViewController" customModule="AdventCalendar" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NKA-23-5ck">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BtX-Ap-pW2">
+                                <rect key="frame" x="31" y="318.5" width="352" height="269"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="TME-dX-Uxl">
+                                        <rect key="frame" x="0.0" y="0.0" width="352" height="269"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BzV-0U-jml">
+                                        <rect key="frame" x="35" y="134.5" width="282" height="0.0"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="30"/>
+                                        <color key="textColor" name="primaryColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="TME-dX-Uxl" secondAttribute="bottom" id="6Y3-fb-XX4"/>
+                                    <constraint firstAttribute="trailing" secondItem="TME-dX-Uxl" secondAttribute="trailing" id="OFP-YS-0ft"/>
+                                    <constraint firstItem="BzV-0U-jml" firstAttribute="centerY" secondItem="BtX-Ap-pW2" secondAttribute="centerY" id="evI-VN-Cbs"/>
+                                    <constraint firstItem="TME-dX-Uxl" firstAttribute="leading" secondItem="BtX-Ap-pW2" secondAttribute="leading" id="fAW-Pd-I27"/>
+                                    <constraint firstItem="TME-dX-Uxl" firstAttribute="top" secondItem="BtX-Ap-pW2" secondAttribute="top" id="gZo-zB-LA6"/>
+                                    <constraint firstItem="BzV-0U-jml" firstAttribute="centerX" secondItem="BtX-Ap-pW2" secondAttribute="centerX" id="nsh-4C-M2F"/>
+                                    <constraint firstItem="BzV-0U-jml" firstAttribute="width" secondItem="TME-dX-Uxl" secondAttribute="width" multiplier="0.8" id="ztm-sN-sOT"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" name="primaryColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.30182470030000003" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="BtX-Ap-pW2" firstAttribute="width" secondItem="NKA-23-5ck" secondAttribute="width" multiplier="0.85" id="A0h-2U-wf4"/>
+                            <constraint firstItem="BtX-Ap-pW2" firstAttribute="centerX" secondItem="FwU-Q0-vqx" secondAttribute="centerX" id="YGx-sU-q1K"/>
+                            <constraint firstItem="BtX-Ap-pW2" firstAttribute="height" secondItem="NKA-23-5ck" secondAttribute="height" multiplier="0.3" id="eHL-U3-Yca"/>
+                            <constraint firstItem="BtX-Ap-pW2" firstAttribute="centerY" secondItem="FwU-Q0-vqx" secondAttribute="centerY" id="nlt-D8-o9Z"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="FwU-Q0-vqx"/>
+                    </view>
+                    <connections>
+                        <outlet property="messageLabel" destination="BzV-0U-jml" id="j0N-D8-bKV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fd0-QJ-zYD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7636" y="91"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="bg" width="2480" height="1683"/>
         <namedColor name="primaryColor">
             <color red="1" green="0.23100000619888306" blue="0.18799999356269836" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
