@@ -10,7 +10,7 @@ import UIKit
 class CalendarCell: UICollectionViewCell {
   @IBOutlet weak var dayLabel: UILabel!
     
-    func configureCell(_ viewModel: CalendarViewModel) {
+    func configureCell(_ viewModel: CalendarViewItemModel) {
         dayLabel.text = viewModel.day
         self.isUserInteractionEnabled = viewModel.isActive
         self.backgroundColor = viewModel.isActive ? UIColor.systemGreen : UIColor.systemRed

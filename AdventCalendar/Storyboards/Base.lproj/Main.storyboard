@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bqx-sF-2Bo">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
@@ -11,13 +11,13 @@
         <!--ADVENT CALENDAR-->
         <scene sceneID="MNx-Uj-k4r">
             <objects>
-                <viewController id="4FE-SF-8hm" customClass="CalendarViewController" customModule="AdventCalendar" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CalendarViewController" id="4FE-SF-8hm" customClass="CalendarViewController" customModule="AdventCalendar" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DqS-Nr-E7e">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="1Bz-3J-TeU">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" name="primaryColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="NmU-iB-hJe">
                                     <size key="itemSize" width="50" height="50"/>
@@ -45,29 +45,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ea0-20-t3i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="6166.666666666667" y="126.5625"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="dxp-OR-dzL">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bqx-sF-2Bo" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="j3Q-3o-ef1">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" name="primaryColor"/>
-                        <textAttributes key="titleTextAttributes">
-                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
-                            <color key="textColor" red="0.93333333330000001" green="0.93333333330000001" blue="0.93725490199999995" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                        </textAttributes>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="4FE-SF-8hm" kind="relationship" relationship="rootViewController" id="gB2-Iy-vVi"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="U5z-yT-Zf7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="5256.521739130435" y="126.5625"/>
         </scene>
         <!--Calendar Alert View Controller-->
         <scene sceneID="rI2-AK-fFQ">
@@ -128,7 +105,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fd0-QJ-zYD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7636" y="91"/>
+            <point key="canvasLocation" x="6919" y="138"/>
         </scene>
     </scenes>
     <resources>

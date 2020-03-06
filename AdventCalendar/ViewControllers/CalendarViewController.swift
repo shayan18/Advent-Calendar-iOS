@@ -8,14 +8,15 @@
 
 import UIKit
 
-class CalendarViewController: UIViewController {
+class CalendarViewController: UIViewController, Storyboarded {
 
     @IBOutlet weak private var collectionView: UICollectionView!
      
     private lazy var dataSource: UICollectionViewDiffableDataSource = {
-        UICollectionViewDiffableDataSource<CalendarSection, CalendarViewModel>()
+        UICollectionViewDiffableDataSource<CalendarSection, CalendarViewItemModel>()
     }()
-    private var viewModels = [CalendarViewModel]()
+    
+    var calendarViewModel: CalendarViewModel?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +27,6 @@ class CalendarViewController: UIViewController {
     private func configureCollectionView() {
         collectionView.register(cellType: CalendarCell.self)
         collectionView.delegate = self
-        viewModels = getGifts().map{CalendarViewModel($0)}.shuffled()
         collectionView.collectionViewLayout = configureCollectionViewLayout()
         configureDataSource()
         configureSnapShot()
@@ -37,20 +37,18 @@ class CalendarViewController: UIViewController {
       let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.3), heightDimension: .fractionalHeight(1.0))
        let item = NSCollectionLayoutItem(layoutSize: itemSize)
       item.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10)
-       
        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalWidth(0.3))
-       
        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: item, count: 3)
-       
        let section = NSCollectionLayoutSection(group: group)
        section.interGroupSpacing = 10
        return UICollectionViewCompositionalLayout(section: section)
       }
     
       func configureDataSource() {
-           dataSource = UICollectionViewDiffableDataSource<CalendarSection, CalendarViewModel>(collectionView: collectionView) { [weak self] (collectionView: UICollectionView, indexPath: IndexPath, calendarViewModel: CalendarViewModel)  ->  UICollectionViewCell? in
+           dataSource = UICollectionViewDiffableDataSource<CalendarSection, CalendarViewItemModel>(collectionView: collectionView) { [weak self] (collectionView: UICollectionView, indexPath: IndexPath, calendarViewItemModel: CalendarViewItemModel)  ->  UICollectionViewCell? in
             let cell = collectionView.dequeueReusableCell(with: CalendarCell.self, for: indexPath)
-            if let viewModel = self?.viewModels[indexPath.row] {
+            
+            if let viewModel = self?.calendarViewModel?.getItem(forIndex: indexPath.row) {
                 cell.configureCell(viewModel)
             }
              return cell
@@ -58,9 +56,10 @@ class CalendarViewController: UIViewController {
         }
     
     func configureSnapShot() {
-        var initialSnapShot = NSDiffableDataSourceSnapshot<CalendarSection, CalendarViewModel>()
+        var initialSnapShot = NSDiffableDataSourceSnapshot<CalendarSection, CalendarViewItemModel>()
         initialSnapShot.appendSections([.main])
-        initialSnapShot.appendItems(viewModels)
+        guard let viewModel = calendarViewModel else { return }
+        initialSnapShot.appendItems(viewModel.getAllItems())
         dataSource.apply(initialSnapShot, animatingDifferences: true)
     }
       
@@ -68,12 +67,10 @@ class CalendarViewController: UIViewController {
 
 extension CalendarViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        self.showCalendarAlert(viewModels[indexPath.row].giftDescription)
+        
+        guard let viewModel = calendarViewModel else { return }
+        self.showCalendarAlert(viewModel.getItemDescription(forIndex: indexPath.row))
+        
     }
 }
 
-extension CalendarViewController {
-    private func getGifts() -> [Gift] {
-       return GiftStore().gifts
-    }
-}
