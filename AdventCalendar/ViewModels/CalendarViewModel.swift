@@ -13,21 +13,21 @@ import Foundation
 
 struct CalendarViewModel {
     
-    private var items: [CalendarViewItemModel]
+    private var items: [CalendarItemViewModel]
     
     init(withGiftStore giftStore: GiftStore) {
-        self.items = giftStore.gifts.map{ CalendarViewItemModel($0) }.shuffled()
+        self.items = giftStore.gifts.map{CalendarItemViewModel($0)}.shuffled()
     }
     
-    func getAllItems() -> [CalendarViewItemModel] {
-        return items
+    func getAllItems() -> [CalendarItemViewModel] {
+         items
     }
-
-    func getItem(forIndex index: Int) -> CalendarViewItemModel {
-        return items[index]
+    
+    func getItem(forIndex index: Int) -> CalendarItemViewModel {
+         items[index]
     }
     
     func getItemDescription(forIndex index: Int) -> String {
-        return self.getItem(forIndex: index).giftDescription
+         self.getItem(forIndex: index).giftDescription
     }
 }

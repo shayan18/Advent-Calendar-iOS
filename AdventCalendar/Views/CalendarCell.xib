@@ -19,13 +19,9 @@
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="door" translatesAutoresizingMaskIntoConstraints="NO" id="YKJ-cc-tj2">
                         <rect key="frame" x="0.0" y="0.0" width="230" height="192"/>
                     </imageView>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5J2-gN-Uer">
-                        <rect key="frame" x="0.0" y="0.0" width="230" height="192"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="750" text="1" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RwV-Ub-tJr">
-                        <rect key="frame" x="23" y="125" width="184" height="38.5"/>
-                        <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="28"/>
+                        <rect key="frame" x="23" y="125.5" width="184" height="37"/>
+                        <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="27"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -33,16 +29,12 @@
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="YKJ-cc-tj2" secondAttribute="trailing" id="4Ck-yG-hP8"/>
-                    <constraint firstAttribute="bottom" secondItem="5J2-gN-Uer" secondAttribute="bottom" id="4HC-4E-hyb"/>
-                    <constraint firstItem="5J2-gN-Uer" firstAttribute="leading" secondItem="4g4-QK-sJL" secondAttribute="leading" id="Dxl-om-x5G"/>
                     <constraint firstItem="RwV-Ub-tJr" firstAttribute="width" secondItem="4g4-QK-sJL" secondAttribute="width" multiplier="0.8" id="Ek7-qW-xoW"/>
                     <constraint firstItem="YKJ-cc-tj2" firstAttribute="leading" secondItem="4g4-QK-sJL" secondAttribute="leading" id="FLw-Os-DrR"/>
                     <constraint firstItem="YKJ-cc-tj2" firstAttribute="top" secondItem="4g4-QK-sJL" secondAttribute="top" id="MHF-TM-1f5"/>
-                    <constraint firstItem="RwV-Ub-tJr" firstAttribute="centerY" secondItem="5J2-gN-Uer" secondAttribute="centerY" multiplier="1.5" id="SXv-qm-TXb"/>
+                    <constraint firstItem="RwV-Ub-tJr" firstAttribute="centerY" secondItem="YKJ-cc-tj2" secondAttribute="centerY" multiplier="1.5" id="UzE-zA-iO1"/>
                     <constraint firstAttribute="bottom" secondItem="YKJ-cc-tj2" secondAttribute="bottom" id="ka1-UD-Q5c"/>
-                    <constraint firstItem="RwV-Ub-tJr" firstAttribute="centerX" secondItem="5J2-gN-Uer" secondAttribute="centerX" id="nPS-A8-IIU"/>
-                    <constraint firstItem="5J2-gN-Uer" firstAttribute="top" secondItem="4g4-QK-sJL" secondAttribute="top" id="yN1-JZ-tsB"/>
-                    <constraint firstAttribute="trailing" secondItem="5J2-gN-Uer" secondAttribute="trailing" id="yVW-cT-cDc"/>
+                    <constraint firstItem="RwV-Ub-tJr" firstAttribute="centerX" secondItem="YKJ-cc-tj2" secondAttribute="centerX" id="mJd-xt-maC"/>
                 </constraints>
                 <userDefinedRuntimeAttributes>
                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">

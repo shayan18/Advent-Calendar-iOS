@@ -28,7 +28,7 @@
 		E44770C124114F6900BF9131 /* Extension+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44770C024114F6900BF9131 /* Extension+UIView.swift */; };
 		E44770C324115B4C00BF9131 /* Extension+UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44770C224115B4C00BF9131 /* Extension+UICollectionView.swift */; };
 		E47B94E52412DED0005F7CC8 /* CalendarViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47B94E42412DED0005F7CC8 /* CalendarViewBuilder.swift */; };
-		E47B94E72412DF36005F7CC8 /* CalendarViewItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47B94E62412DF36005F7CC8 /* CalendarViewItemModel.swift */; };
+		E47B94E72412DF36005F7CC8 /* CalendarItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47B94E62412DF36005F7CC8 /* CalendarItemViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,7 +55,7 @@
 		E44770C024114F6900BF9131 /* Extension+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIView.swift"; sourceTree = "<group>"; };
 		E44770C224115B4C00BF9131 /* Extension+UICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UICollectionView.swift"; sourceTree = "<group>"; };
 		E47B94E42412DED0005F7CC8 /* CalendarViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewBuilder.swift; sourceTree = "<group>"; };
-		E47B94E62412DF36005F7CC8 /* CalendarViewItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewItemModel.swift; sourceTree = "<group>"; };
+		E47B94E62412DF36005F7CC8 /* CalendarItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarItemViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,8 +88,8 @@
 		E41DE159241111E600F4032C /* AdventCalendar */ = {
 			isa = PBXGroup;
 			children = (
-				E47B94E32412DEBB005F7CC8 /* Builder */,
 				E42811FC241133D400F61746 /* AppDelegate */,
+				E47B94E32412DEBB005F7CC8 /* Builder */,
 				E42811FB241133C800F61746 /* Storyboards */,
 				E42811F9241133B200F61746 /* ViewControllers */,
 				E42811FA241133C000F61746 /* Views */,
@@ -116,9 +116,9 @@
 		E42811FA241133C000F61746 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E44770B724114DDF00BF9131 /* SnowParticleView.swift */,
 				E431659A241115CF00CAC2C8 /* CalendarCell.swift */,
 				E431659C241115DB00CAC2C8 /* CalendarCell.xib */,
-				E44770B724114DDF00BF9131 /* SnowParticleView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -161,7 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				E42812052411353F00F61746 /* CalendarViewModel.swift */,
-				E47B94E62412DF36005F7CC8 /* CalendarViewItemModel.swift */,
+				E47B94E62412DF36005F7CC8 /* CalendarItemViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -276,7 +276,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E41DE15F241111E600F4032C /* CalendarViewController.swift in Sources */,
-				E47B94E72412DF36005F7CC8 /* CalendarViewItemModel.swift in Sources */,
+				E47B94E72412DF36005F7CC8 /* CalendarItemViewModel.swift in Sources */,
 				E42811FE241133F100F61746 /* Gift.swift in Sources */,
 				E44770C124114F6900BF9131 /* Extension+UIView.swift in Sources */,
 				E41DE15B241111E600F4032C /* AppDelegate.swift in Sources */,

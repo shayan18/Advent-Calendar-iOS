@@ -9,36 +9,37 @@
 import UIKit
 
 class CalendarAlertViewController: UIViewController, Storyboarded {
-
-    @IBOutlet weak var messageLabel: UILabel!
+    // MARK: Outlets
+    @IBOutlet weak private var messageLabel: UILabel!
+    
+    // MARK: Properties
     var message: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         messageLabel.text = message
         configureSnowView()
-
+    }
+    //setting up snow particle animation
+    private func configureSnowView() {
+        
+        let snow = SnowParticleView()
+        snow.translatesAutoresizingMaskIntoConstraints = false
+        snow.particleImage = UIImage(named: "snow")
+        view.addSubview(snow)
+        snow.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            snow.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            snow.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            snow.topAnchor.constraint(equalTo: view.topAnchor),
+            snow.bottomAnchor.constraint(equalTo: view.bottomAnchor)])
+        
+        //setting dismiss tap gesture
+        let tap = UITapGestureRecognizer(target: self, action: #selector(self.dismissTap))
+        snow.addGestureRecognizer(tap)
     }
     
-    private func configureSnowView() {
-          
-          let snow = SnowParticleView()
-          snow.translatesAutoresizingMaskIntoConstraints = false
-          snow.particleImage = UIImage(named: "snow")
-          view.addSubview(snow)
-          snow.translatesAutoresizingMaskIntoConstraints = false
-          NSLayoutConstraint.activate([
-                    snow.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-                    snow.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-                    snow.topAnchor.constraint(equalTo: view.topAnchor),
-                    snow.bottomAnchor.constraint(equalTo: view.bottomAnchor)])
-          
-          //setting dismiss tap gesture
-          let tap = UITapGestureRecognizer(target: self, action: #selector(self.dismissTap))
-                 snow.addGestureRecognizer(tap)
-      }
-      @objc func dismissTap(_ sender: UITapGestureRecognizer? = nil) {
-          self.dismiss(animated: true, completion: nil)
-      }
-
-
+    @objc private func dismissTap(_ sender: UITapGestureRecognizer? = nil) {
+        self.dismiss(animated: true, completion: nil)
+    }
 }

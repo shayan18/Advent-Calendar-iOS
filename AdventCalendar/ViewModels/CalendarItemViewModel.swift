@@ -8,12 +8,12 @@
 
 import Foundation
 
-struct CalendarViewItemModel: Hashable {
+struct CalendarItemViewModel: Hashable {
     
-    private let model: Gift
+    private let gift: Gift
     
     init(_ model: Gift) {
-        self.model = model
+        self.gift = model
     }
     
     func activateCalendarDay(_ day: Int)-> Bool {
@@ -24,28 +24,28 @@ struct CalendarViewItemModel: Hashable {
     }
 }
 
-extension CalendarViewItemModel {
+extension CalendarItemViewModel {
     
     var isActive: Bool {
-        return activateCalendarDay(model.day)
+        return activateCalendarDay(gift.day)
     }
     
     var day: String {
-        return "\(model.day)"
+        return "\(gift.day)"
     }
     
     var giftDescription: String {
-        return "Yahooo! You Got \(model.name)"
+        return "Yahooo! You Got \(gift.name)"
     }
 }
 
-extension CalendarViewItemModel {
-    static func == (lhs: CalendarViewItemModel, rhs: CalendarViewItemModel) -> Bool {
-        return lhs.model.day == rhs.model.day
+extension CalendarItemViewModel {
+    static func == (lhs: CalendarItemViewModel, rhs: CalendarItemViewModel) -> Bool {
+        return lhs.gift.day == rhs.gift.day
         
     }
     func hash(into hasher: inout Hasher) {
-        hasher.combine(model.day)
+        hasher.combine(gift.day)
     }
 }
 
