@@ -9,8 +9,8 @@
 import Foundation
 extension Date {
     
-    func getCurrentWeekDay() -> Int? {
-        return Calendar.current.dateComponents([.weekday], from: Date()).weekday
+    func getCurrentMonthDay() -> Int? {
+        return Calendar.current.dateComponents([.day], from: Date()).day
     }
 }
 

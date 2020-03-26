@@ -17,7 +17,7 @@ struct CalendarItemViewModel: Hashable {
     }
     
     func activateCalendarDay(_ day: Int)-> Bool {
-        if let currentDay = Date().getCurrentWeekDay() {
+        if let currentDay = Date().getCurrentMonthDay() {
             return day <= currentDay
         }
         return false
